@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>situação Aluno</title>
+    <style>
+    
+    #botão{
+
+height: 75px;
+width: 150px;
+
+
+    }
+    
+    </style>
+</head>
+<body>
+    <h1>situação do aluno</h1>
+    <button id="botão">Entrar com notas</button>
+    <div id="texto"><p>Clique no botão acima para informar as notas dos alunos</p></div>
+    <script>
+    
+    var botão = window.document.getElementById('botão')
+    botão.addEventListener('click', clicou)
+    var texto = window.document.getElementById('texto')
+
+function clicou(){
+
+    var nome = window.prompt('Qual eé o nome do aluno?')
+    var nota1 = Number(window.prompt(`Primeira nota de ${nome}`))
+    var nota2 = Number(window.prompt(`Segunda nota de ${nome}`))
+    var média = (nota1 + nota2)/2
+
+    if(média < 3){
+
+        texto.innerHTML = `<h1>Analisando a situação de ${nome}</h1>`
+        texto.innerHTML += `<p>Com as notas ${nota1} e ${nota2}, <strong>a média é ${média}</strong></p>`
+        texto.innerHTML += `<p>Com média abaixo de 3,0, o aluno está <strong>REPROVADO</strong></p>`
+    }else if(média <= 6){
+
+        texto.innerHTML = `<h1>Analisando a situação de ${nome}</h1>`
+        texto.innerHTML += `<p>Com as notas ${nota1} e ${nota2}, <strong>a média é ${média}</strong></p>`
+        texto.innerHTML += `<p>Com média entre 3,0 e 6,0, o aluno está <strong>em RECUPERAÇÃO</strong></p>`
+
+
+    }else{
+
+        texto.innerHTML = `<h1>Analisando a situação de ${nome}</h1>`
+        texto.innerHTML += `<p>Com as notas ${nota1} e ${nota2}, <strong>a média é ${média}</strong></p>`
+        texto.innerHTML += `<p>Com média acima de 6,0, o aluno está <strong>APROVADO</strong></p>`
+
+
+    }
+    
+
+
+
+    }
+    
+    
+    
+    </script>
+    
+</body>
+</html>

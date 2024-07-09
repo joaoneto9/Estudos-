@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculando troco</title>
+    <style>
+    input{
+        width: 150px;
+        height: 75px;
+
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <h1>Calculando troco</h1>
+    <input id="1" type="button" value="Comprar produto">
+    <script>
+    var a = window.document.getElementById('1')
+    a.addEventListener('click', clicou)
+
+    function clicou(){
+
+    var produto = window.prompt('Qual o prduto da sua compra?')
+    var preço = Number(window.prompt(`qual o valor do ${produto}?`))
+    var pagamento = Number(window.prompt(`qual o valor que você deu para pagar o ${produto}`))
+    var troco = pagamento - preço
+    
+    if(preço > pagamento){
+
+window.alert('Não foi possiivel efetuar a compra')
+
+    }else{
+    window.alert(`Você comprou ${produto} que custou R$ ${preço}.
+Deu R$ ${pagamento} em dinehiro e vai receber R$ ${troco} de troco.
+Volte Sempre!`)
+
+    }
+
+
+
+    }
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Antes e depois</title>
+    <style>
+    input{
+        width: 150px;
+        height: 75px;
+
+    }
+
+
+    
+    </style>
+</head>
+<body>
+    <h1>Antes e Depois</h1>
+    <input id='1' type="button" value="Antecessor e Sucessor">
+    <script>
+    
+    var a = window.document.getElementById('1')
+    a.addEventListener('click', clicou)
+
+
+    function clicou(){
+
+var n = Number(window.prompt('Digite um numero inteiro qualquer:'))
+var ant = n - 1
+var suc = n + 1 
+
+if(isNaN(n)) {
+
+window.alert('Isso não é um numero inteiro, tente novamente!')
+              }//isNaN serve para considerar a condicao de se "n" não eé um numeor, disparando esse alerta
+else {
+    window.alert(`Antes de ${n}, temos o numero ${ant}!
+Depois de ${n}, temos o numero ${suc}!`)
+}//Caso ele seja um numero, ele dispara esse alerta, afirmando seu antecessor e seu sucessor
+
+
+}
+
+
+    
+
+
+
+    
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>

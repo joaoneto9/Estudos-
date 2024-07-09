@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculando a media de um aluno</title>
+    <style>
+    
+    input#b{
+
+height: 50px;
+width: 150px;
+    }
+    
+    </style>
+</head>
+<body>
+<h1>Planilha de media</h1>
+Nota1:<input id="nota1" type="text">
+<br>
+Nota2:<input id="nota2" type="text">
+<br>
+Nota3:<input id="nota3" type="text">
+<br>
+<br>
+<input id="b" type="button" value="calcular a média">
+<!--lembrar que o que vai ta escrito aqui nao vai ser considerado numeros, tenho que colocar ".value" para pegar o valor escrito nesses pequenos textos.Ademais, o comando "parseFloat" vai ajudar a transformar o "string" do input text em "numero", quando atribuido, tambem, o ".value"-->
+<div id="médiafinal"></div>
+
+
+
+
+    <script src="script011.js"></script>
+</body>
+</html>

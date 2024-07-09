@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Converter temperaturas</title>
+    <style>
+    input{
+
+height: 75px;
+width: 150px;
+
+    }
+
+
+
+    
+    
+    
+    
+    </style>
+</head>
+<body>
+    <h1>Conversor de temperaturas</h1>
+    <input id="1" type="button" value="Converter">
+    <p id="2">clique no botão acima para iniciar</p>
+    <div id="3"></div>
+    <script>
+    
+    var a = window.document.getElementById('1')
+    var p = window.document.getElementById('2')
+    var d = window.document.getElementById('3')
+    a.addEventListener('click', clicou)
+
+    function clicou(){
+
+    var Tc = Number(window.prompt('digite uma temperatura em Celsius')) 
+    var Tk = Tc + 273
+    var Tf = Tc * 9/5 + 32
+    p.innerHTML = `A temperatura de ${Tc} C, corresponde a...`
+    var conversões = `${Tk} k(kelvin)
+    ${Tf} F(Fahrenheit)`
+
+    d.innerHTML = conversões
+
+
+
+
+    }
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>

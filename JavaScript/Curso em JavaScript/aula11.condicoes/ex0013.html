@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multando em alta velocidade</title>
+    <style>
+    
+    
+    </style>
+</head>
+<body>
+    <h1>sistemas de multas</h1>
+    Velocidade do carro<input type="number" name="txtvel" id="1"> Km/h
+    <input type="button" value="verificar" id="2">
+    <div id="3"></div>
+    <script>
+
+    var vel = 50
+    var a = window.document.getElementById('1')
+    var b = window.document.getElementById('2')
+    var d = window.document.getElementById('3')
+    b.addEventListener('click', calcular)
+
+    function calcular(){
+
+if(a.value > vel){
+
+d.innerHTML = `voce foi multado, visto que passou do limie de ${vel} Km/h`
+
+}else{
+
+d.innerHTML = 'continue trafegando de forma segura, não esqueça do sinto de segurança'
+
+
+}
+
+
+    }
+    
+    
+    </script>
+
+    
+</body>
+</html>

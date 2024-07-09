@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Preço mudou</title>
+    <style>
+    
+    #botão{
+
+width: 150px;
+height: 75px;
+
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Preço Mudou</h1>
+    <button id="botão">verificar</button>
+    <div id="txt"><p>Clique no botão acima para analisar a mudança de preço.</p></div>
+
+    <script>
+    
+    var botão = window.document.getElementById('botão')
+    botão.addEventListener('click', clicou)
+    var texto = window.document.getElementById('txt')
+
+    function clicou(){
+
+var anterior = Number(window.prompt('qual era o preço anterior do produto?'))
+var atual = Number(window.prompt('qual é o preço atual do produto?'))
+
+if(isNaN(anterior) || isNaN(atual)){
+
+          window.alert('[ERRO]Digite valores vaálidos')
+}else if(anterior == atual){
+
+          texto.innerHTML = `<h1>Analisando os valores informados</h1>`
+          texto.innerHTML += `<p>O produto custava R$ ${anterior} e agora custa R$ ${atual}.</p>`
+          texto.innerHTML += `<p>O produto não alterou de preço.</p>`
+}else if(anterior < atual){
+
+var aumento = atual - anterior
+var variação = (atual/anterior - 1)*100
+texto.innerHTML = `<h1>Analisando os valores informados</h1>`
+texto.innerHTML += `<p>O produto custava R$ ${anterior} e agora custa R$ ${atual}.</p>`
+texto.innerHTML += `<p>O produto subiu R$${aumento} em releção ao preço anterior.</p>`
+texto.innerHTML += `<p>Uma variação de ${variação}% pra cima</p>`
+
+
+}else{
+
+var decrécimo = anterior - atual
+var variação = (1 - atual/anterior)*100
+texto.innerHTML = `<h1>Analisando os valores informados</h1>`
+texto.innerHTML += `<p>O produto custava R$ ${anterior} e agora custa R$ ${atual}.</p>`
+texto.innerHTML += `<p>O produto caiu R$${decrécimo} em releção ao preço anterior.</p>`
+texto.innerHTML += `<p>Uma variação de ${variação}% pra baixo</p>`
+
+
+}
+
+
+
+
+    }
+
+    
+    
+    
+    </script>
+</body>
+</html>

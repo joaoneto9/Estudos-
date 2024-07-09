@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reajuste salarial</title>
+    <style>
+    
+    input{
+
+width: 150px;
+height: 75px;
+
+    }
+    
+    </style>
+</head>
+<body>
+    <h1>Reajuste salarial</h1>
+    <input id="1"  type="button" value="Reajustar Salário">
+    <div id="2"><p>Clique no botão acima para iniciar</p></div>
+
+    <script>
+        var a = window.document.getElementById('1')
+        var d = window.document.getElementById('2')
+        a.addEventListener('click', clicou)
+
+        function clicou(){
+
+    var name = window.prompt('qual é o nome do funcionário?')
+    var salário = Number(window.prompt(`qual é o salário de ${name}`))
+    var reajuste = Number(window.prompt('O salário de Pedro Paulo vai ser reajustado em qaul porcentagem?'))
+
+    var aumento = salário * reajuste/100
+    var novo = salário * (100 + reajuste)/100
+
+    d.innerHTML = `<h1>${name} recebeu um aumento salarial!</h1>`
+    d.innerHTML += `<p>O salário atual era ${salário}.</p>
+                    <p>com o aumento de ${reajuste}%, o salário vai aumentar R$${aumento} no proximo mês.</p>
+                    <p>E a partir daí, ${name} vai passar a ganhar R$${novo}.`
+    
+
+
+        }
+        
+        
+        
+        
+    </script>
+</body>
+</html>

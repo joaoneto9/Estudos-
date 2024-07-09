@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conversor R$ --> US$</title>
+    <style>
+    
+    input{
+
+height: 75px;
+width: 150px;
+
+
+    }
+    
+    </style>
+</head>
+<body>
+    
+    <h1>Conversor R$ --> US$</h1>
+    <input id="1" type="button" value="converter">
+    <p id="2">clique no botão acima para iniciar</p>
+
+    <script>
+    
+    var cotação = Number(window.prompt('Antes de mais nada. Quanto está a cotação do dolar agora?'))
+    var a = window.document.getElementById('1')
+    var p = window.document.getElementById('2')
+
+    a.addEventListener('click', clicou)
+
+    if(isNaN(cotação)){
+
+window.alert('ERRO! Digite o valor em numeros, por favor.')
+
+    }
+
+    function clicou(){
+
+    var R$ = Number(window.prompt('quantos R$ você tem na carteira?'))
+
+    if(isNaN(R$)){
+
+    window.alert('ERRO! Digite o valor em numeros, por favor.')
+
+
+    }else{
+
+    var US$ = R$ / cotação  
+    p.innerHTML = `Voce consegue US$ ${US$} com o dinheiro que você tem na carteira agora`
+
+
+
+    }
+
+
+    }
+    
+    
+    </script>
+</body>
+</html>

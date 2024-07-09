@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>resolvendo bhaskara</title>
+    <style>
+    input{
+
+width: 150px;
+height: 75px;
+
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <input id="1" type="button" value="Cacular">
+    <div id="2"></div>
+
+    <script>
+    var botão = window.document.getElementById('1')
+    var div = window.document.getElementById('2') 
+    div.innerHTML = "considerando uma equação no formato <strong>ax² + bx + c = 0</strong>, aperte o botão acima para calcular o valor de Δ."
+    botão.addEventListener("click", clicou)
+    
+function clicou(){
+
+var a = Number(window.prompt('Qual o valor de a?'))
+var b = Number(window.prompt('Qual o valor de b?'))
+var c = Number(window.prompt('Qual o valor de c?'))
+
+if(isNaN(a) || isNaN(b) || isNaN(c)){
+
+window.alert('digite valores válidos!')
+
+
+}else{
+
+var Δ = b**2 - 4*a*c
+div.innerHTML = `<h1>Resolvendo Bhaskara</h1>
+<p>A equação atual é ${a}x² + ${b}x + ${c} = 0</p>
+<p>O cálculo realizado será Δ = ${b}² - 4.${a}.${c}</p>
+<p>O valor calculado foi <strong>Δ = ${Δ}</strong></p>
+
+
+
+`
+
+}
+
+}
+    </script>
+
+</body>
+</html>

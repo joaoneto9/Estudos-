@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+
+background: green;
+font: normal 20pt arial;
+width: 200px;
+height: 200px;
+color: white;
+line-height: 200px;
+text-align: center;
+
+        }
+    
+    
+    
+    
+    </style>
+</head>
+<body>
+
+    <div id='area'> <!-- o "onclick" serviu para ativar a função "clicar" na Div, a mesma coisa serve para "onmouseenter" para quando o mouse entrara na Div e para "onmouseout" para quando o mouse sair da Div-->
+  <!-- Dessa maneira o Html fica muito poluido, portanto podemos usar um comando na Parte do 'script' para executar a mesma ideia, sendo ele "addEventListener" -->
+
+        interaja
+
+    </div>
+    <script>
+
+      var a = window.document.getElementById('area')
+      a.addEventListener('click', clicar)
+      a.addEventListener('mouseenter', entrou)
+      a.addEventListener('mouseout', saiu)
+
+function clicar() {
+
+            
+            a.innerText = 'Clicou'
+            a.style.background = 'red'
+//efetuei a função dentro do codigo para esse setor e a partir disso ele vai efetuar o que eu quero quando ele "clicar", nesse caso ele altera o nome da Div de "interaja" para "clicou"
+
+}
+
+function entrou(){
+
+
+a.innerText = 'clique'
+//para quando o mouse entrar
+
+}
+
+function saiu(){
+
+
+a.innerText = 'interaja'
+a.style.background = 'green'
+//para quando o mouse sair
+
+}
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+    
+</body>
+</html>

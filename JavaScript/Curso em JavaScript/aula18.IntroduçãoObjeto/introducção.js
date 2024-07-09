@@ -1,0 +1,3 @@
+var carro = {nome: 'Passat', marca: 'Vw' , ano: 1999, km: 100000, andar(d){}}
+//isso é um  objeto, sua grande diferencça e vantagem para o array eé que voce consegue nomear os indices da "lista", o que facilita a organização, ja que voce consegue determinar cada coisa e principalmente, pq voce consegue determinar o valor de "strings" e "numeros" de formas diferentes.
+//o "andar(d)" foi uma function que carrega o indice "anadar" e parametro "d"

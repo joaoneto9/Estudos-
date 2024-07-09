@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desconto de 10%</title>
+    <style>
+    
+    input{
+
+width: 150px;
+height: 75px;
+
+    }
+    
+    </style>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+    <input id="botão" type="button" value="Desconto de 10%">
+    <div id="txt">clique no botão acima para iniciar</div>
+
+    <script>
+       var a = window.document.getElementById('botão')
+       var d = window.document.getElementById('txt')
+       a.addEventListener('click', clicou)
+
+       function clicou(){
+
+
+    var p = window.prompt('qual é o produto que voce esta comprando?')
+    var n = Number(window.prompt(`qual é o valor do ${p}?`))
+    var desconto = n / 10
+    var realvalor = n * 9/10 
+    d.innerHTML = `<h1>Calculando desconto de 10% para Smart wtch</h1>`
+    d.innerHTML += `<p>o preço original era R$ ${n}</p>
+    <p>voce acabou de ganhar R$ ${desconto} de desconto</p>
+    <p>No fim, você vai pagar R$ ${realvalor} no produto ${p}</p>`
+
+    
+
+
+       }
+
+
+    
+    
+    
+    
+    
+    </script>
+
+
+</body>
+</html>

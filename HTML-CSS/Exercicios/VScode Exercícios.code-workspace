@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "Exercício 001"
+		},
+		{
+			"path": "Exercício 002"
+		},
+		{
+			"path": "exercício 003"
+		},
+		{
+			"path": "exercício 004"
+		},
+		{
+			"path": "exercício 005"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

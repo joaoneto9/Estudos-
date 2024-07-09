@@ -1,0 +1,50 @@
+body{
+
+    background:blue;
+    font: normal 15pt Arial
+    
+    }
+    
+    header{
+    
+    color: white;
+    text-align: center;
+    
+    }
+    section{
+    
+    
+    background: white;
+    border-radius: 10px;/*o raio da borda, gerando um novo aspecto*/
+    padding: 15px;/*gera um espaço de limite*/
+    width: 500px;/*largura fixa*/
+    margin: auto;/*o "margin: auto" serve para centralizar a section*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.426);/*coloca uma sombra ao redor da "section"*/
+    
+    
+    }
+    footer{
+    
+    
+    color: white;
+    text-align: center;/*serve para centralizar o texto, por isso o comando eh "Text-align" = "alinhamento do texto"*/
+    font-style: italic;
+    }
+    
+    #botão{
+
+    width: 75px;
+
+    }
+    div#txt1{
+    
+        text-align: center;
+        padding: 8px;
+        
+        
+        }
+        
+    #txt2{
+            text-align: center;
+        }
+    
